@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyGame.GameMain.Items;
 
 namespace MyGame.GameMain.Living.Player
 {
@@ -14,6 +15,7 @@ namespace MyGame.GameMain.Living.Player
         public int maxAtk { get; set; }
         public int exp { get; set; }
         public int level { get; set; }
+        public List<Item> items { get; set; }
 
         public Player(int maxHp, int currentHp, int minAtk, int maxAtk, int exp, int level)
         {
