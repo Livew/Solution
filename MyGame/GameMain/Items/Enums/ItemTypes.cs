@@ -13,7 +13,8 @@ namespace MyGame.GameMain.Items.Enums
             Weapon,
             Potion,
             Misc,
-            Material
+            Material,
+            Food
         }
     }
 }

@@ -9,8 +9,10 @@ namespace MyGame.GameMain.Items
 {
     class Item
     {
-        public ItemTypes.ItemType itemType;
-        public int goldPrice;
-        public int cashPrice;
+        public string name { get; set; }
+        public ItemTypes.ItemType itemType { get; set; }
+        public int goldPrice { get; set; }
+        public int cashPrice { get; set; }
+        public int dropRate { get; set; }
     }
 }

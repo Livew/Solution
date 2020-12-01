@@ -51,14 +51,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameMain\Actions\Battle\Battle.cs" />
     <Compile Include="GameMain\Items\Enums\ItemTypes.cs" />
+    <Compile Include="GameMain\Items\Food\Cheese.cs" />
+    <Compile Include="GameMain\Items\Food\Food.cs" />
     <Compile Include="GameMain\Items\Item.cs" />
+    <Compile Include="GameMain\Items\Misc\RatTooth.cs" />
     <Compile Include="GameMain\Items\Weapons\Swords\BasicSword.cs" />
     <Compile Include="GameMain\Items\Weapons\Swords\Katana.cs" />
     <Compile Include="GameMain\Items\Weapons\Weapon.cs" />
+    <Compile Include="GameMain\Living\Living.cs" />
+    <Compile Include="GameMain\Living\Monster\BigRat.cs" />
+    <Compile Include="GameMain\Living\Monster\Rat.cs" />
+    <Compile Include="GameMain\Living\Monster\Monster.cs" />
     <Compile Include="GameMain\Living\Player\Player.cs" />
+    <Compile Include="GameMain\Locations\Cities\FirstCity.cs" />
+    <Compile Include="GameMain\Locations\Undergrounds\SewerSub1.cs" />
+    <Compile Include="GameMain\Locations\Location.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,7 +96,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GameMain\Locations\" />
+    <Folder Include="GameMain\Actions\Travel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
