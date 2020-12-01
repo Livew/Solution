@@ -14,13 +14,14 @@ namespace MyGame.GameMain.Living.Player
         public string name { get; set; }
         public int exp { get; set; }
         public int level { get; set; }
+        public int gold { get; set; }
         public List<Item> items { get; set; }
         public Location currentLocation { get; set; }
         public int maxStamina { get; set; }
         public int currentStamina { get; set; }
         private static Player instance { get; set; }
 
-        public Player(string name, int maxHp, int currentHp, int minAtk, int maxAtk, int exp, int level)
+        public Player(string name, int maxHp, int currentHp, int minAtk, int maxAtk, int exp, int level, List<Item> items)
         {
             this.name = name;
             this.maxHp = maxHp;
@@ -29,12 +30,13 @@ namespace MyGame.GameMain.Living.Player
             this.maxAtk = maxAtk;
             this.exp = exp;
             this.level = level;
+            this.items = items;
         }
 
         public static Player getPlayer()
         {
             if (instance == null)
-                instance = new Player("Livew", 20, 20, 3, 5, 0, 1);
+                instance = new Player("Livew", 20, 20, 3, 5, 0, 1, new List<Item>());
 
             return instance;
         }
@@ -47,6 +49,7 @@ namespace MyGame.GameMain.Living.Player
         public void eat(Food food)
         {
             this.currentHp += food.healAmount;
+            Console.WriteLine(this.name + " Had " + (this.currentHp - food.healAmount) + " now has " + this.currentHp);
         }
     }
 }

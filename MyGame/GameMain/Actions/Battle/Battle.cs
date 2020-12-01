@@ -12,6 +12,7 @@ namespace MyGame.GameMain.Actions.Battle
     {
         public Monster monster { get; set; }
         public Player player { get; set; }
+        public BattleCalculate battleCalculate;
 
         public Battle(Player player, Monster monster)
         {
@@ -28,6 +29,8 @@ namespace MyGame.GameMain.Actions.Battle
                 playerAttack(player, monster);
                 monsterAttack(player, monster);
             }
+
+            BattleCalculate battleCalculate = new BattleCalculate(player, monster);
         }
 
         public void playerAttack(Player player, Monster monster)

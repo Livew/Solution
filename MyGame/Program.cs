@@ -1,6 +1,7 @@
 using MyGame.GameMain.Actions.Battle;
 using MyGame.GameMain.Living.Monster;
 using MyGame.GameMain.Living.Player;
+using MyGame.GameMain.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace MyGame
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            Player player = new Player("Livew", 20, 20, 3, 5, 0, 1);
+            Player player = new Player("Livew", 20, 20, 3, 5, 0, 1, new List<Item>());
         }
     }
 }

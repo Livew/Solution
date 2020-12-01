@@ -14,5 +14,6 @@ namespace MyGame.GameMain.Items
         public int goldPrice { get; set; }
         public int cashPrice { get; set; }
         public int dropRate { get; set; }
+        public int quantity { get; set; }
     }
 }

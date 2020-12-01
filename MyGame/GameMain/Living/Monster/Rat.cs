@@ -25,6 +25,10 @@ namespace MyGame.GameMain.Living.Monster
             this.minAtk = 1;
             this.maxAtk = 2;
 
+            this.expDrop = 5;
+            this.goldDrop = 2;
+            this.cashDrop = 0;
+
             //foreach (Item item in this.itemMayDrops)
             //{
             //    willDrop(item);
