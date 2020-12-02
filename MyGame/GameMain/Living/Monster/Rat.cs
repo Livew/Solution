@@ -16,8 +16,6 @@ namespace MyGame.GameMain.Living.Monster
             Cheese cheese = new Cheese(4);
             RatTooth ratTooth = new RatTooth(4);
 
-            List<Item> itensMayDrop = new List<Item>();
-
             itensMayDrop.Add(cheese);
             itensMayDrop.Add(ratTooth);
 
@@ -33,5 +31,11 @@ namespace MyGame.GameMain.Living.Monster
             this.goldDrop = 2;
             this.cashDrop = 0;
         }
+
+        public static void destroyRat()
+        {
+            instance = null;
+        }
+
     }
 }

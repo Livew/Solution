@@ -46,6 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameMain\Actions\Battle\BattleAnimate.cs" />
+    <Compile Include="GameMain\Actions\Travel\Travelling.cs" />
+    <Compile Include="GameMain\Forms\Builders\BattleBuilder.cs" />
+    <Compile Include="GameMain\Forms\Builders\LocationBuilder.cs" />
+    <Compile Include="GameMain\Forms\Builders\TravelBuilder.cs" />
     <Compile Include="GameMain\Forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +63,18 @@
     </Compile>
     <Compile Include="GameMain\Forms\BattleForm.Designer.cs">
       <DependentUpon>BattleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameMain\Forms\LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMain\Forms\LocationForm.Designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameMain\Forms\TravelDestinations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMain\Forms\TravelDestinations.Designer.cs">
+      <DependentUpon>TravelDestinations.cs</DependentUpon>
     </Compile>
     <Compile Include="GameMain\Items\Enums\ItemTypes.cs" />
     <Compile Include="GameMain\Items\Food\Cheese.cs" />
@@ -74,8 +90,12 @@
     <Compile Include="GameMain\Living\Monster\Monster.cs" />
     <Compile Include="GameMain\Living\Player\Player.cs" />
     <Compile Include="GameMain\Locations\Cities\FirstCity.cs" />
-    <Compile Include="GameMain\Locations\Undergrounds\SewerSub1.cs" />
+    <Compile Include="GameMain\Locations\AllLocations.cs" />
+    <Compile Include="GameMain\Locations\Desert\LeakDesert.cs" />
+    <Compile Include="GameMain\Locations\Forest\OakForest.cs" />
+    <Compile Include="GameMain\Locations\Undergrounds\SewerSub\SewerSub1.cs" />
     <Compile Include="GameMain\Locations\Location.cs" />
+    <Compile Include="GameMain\Locations\Undergrounds\SewerSub\SewerSub2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameMain\Forms\MainMenu.resx">
@@ -83,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameMain\Forms\BattleForm.resx">
       <DependentUpon>BattleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameMain\Forms\LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameMain\Forms\TravelDestinations.resx">
+      <DependentUpon>TravelDestinations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,8 +132,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameMain\Actions\Travel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

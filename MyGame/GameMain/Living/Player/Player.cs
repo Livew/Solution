@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MyGame.GameMain.Items;
 using MyGame.GameMain.Items.Food;
 using MyGame.GameMain.Locations;
+using MyGame.GameMain.Locations.Cities;
 
 namespace MyGame.GameMain.Living.Player
 {
@@ -23,6 +24,7 @@ namespace MyGame.GameMain.Living.Player
 
         public Player(string name, int maxHp, int currentHp, int minAtk, int maxAtk, int exp, int level, List<Item> items)
         {
+            this.currentLocation = FirstCity.getFirstCity();
             this.name = name;
             this.maxHp = maxHp;
             this.currentHp = currentHp;
@@ -44,6 +46,12 @@ namespace MyGame.GameMain.Living.Player
         public static void destroyPlayer()
         {
             instance = null;
+        }
+
+
+        public void setPlayerLocation(Location location)
+        {
+            this.currentLocation = location;
         }
 
         public void eat(Food food)

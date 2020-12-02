@@ -12,5 +12,12 @@ namespace MyGame.GameMain.Living
         public int currentHp { get; set; }
         public int minAtk { get; set; }
         public int maxAtk { get; set; }
+
+        public bool isAlive()
+        {
+            if (this.currentHp > 0) return true;
+
+            return false;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MyGame.GameMain.Forms
 {
-    partial class BattleForm
+    partial class TravelDestinations
     {
         /// <summary>
         /// Required designer variable.
@@ -33,23 +33,22 @@
             // 
             // backToMain
             // 
-            this.backToMain.Location = new System.Drawing.Point(103, 195);
+            this.backToMain.Location = new System.Drawing.Point(442, 336);
             this.backToMain.Name = "backToMain";
             this.backToMain.Size = new System.Drawing.Size(75, 23);
-            this.backToMain.TabIndex = 4;
+            this.backToMain.TabIndex = 5;
             this.backToMain.Text = "Back";
             this.backToMain.UseVisualStyleBackColor = true;
             this.backToMain.Click += new System.EventHandler(this.backToMain_Click);
             // 
-            // BattleForm
+            // TravelDestinations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.backToMain);
-            this.Location = new System.Drawing.Point(78, 338);
-            this.Name = "BattleForm";
-            this.Text = "Form2";
+            this.Name = "TravelDestinations";
+            this.Text = "TravelDestinations";
             this.ResumeLayout(false);
 
         }

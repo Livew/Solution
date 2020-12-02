@@ -12,6 +12,13 @@ namespace MyGame.GameMain.Locations
         public string name { get; set; }
         public List<Monster> monsters { get; set; }
         public int levelRequirement { get; set; }
+        public List<Location> canGoTo { get; set; }
+
+        public Location()
+        {
+            this.monsters = new List<Monster>();
+
+        }
 
     }
 }

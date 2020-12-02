@@ -42,6 +42,8 @@ namespace MyGame.GameMain.Actions.Battle
                 player.items.Add(item);
                 Console.WriteLine("!!!!!!!! " + player.name + " Got " + item.name);
             }
+
+            MainMenu.getMainMenu().addToInventory(monster.itensWillDrop);
         }
     }
 }

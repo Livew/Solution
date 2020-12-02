@@ -11,12 +11,12 @@ namespace MyGame.GameMain.Living.Monster
 {
     class BigRat : Monster
     {
+
+        private static BigRat instance { get; set; }
         public BigRat()
         {
             Cheese cheese = new Cheese(6);
             RatTooth ratTooth = new RatTooth(5);
-
-            List<Item> itensMayDrop = new List<Item>();
 
             itensMayDrop.Add(cheese);
             itensMayDrop.Add(ratTooth);
@@ -32,6 +32,14 @@ namespace MyGame.GameMain.Living.Monster
             this.expDrop = 10;
             this.goldDrop = 5;
             this.cashDrop = 0;
+        }
+
+        public static BigRat getBigRat()
+        {
+            if (instance == null)
+                instance = new BigRat();
+
+            return instance;
         }
     }
 }

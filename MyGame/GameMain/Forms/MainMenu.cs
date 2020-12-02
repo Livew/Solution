@@ -1,6 +1,7 @@
 using MyGame.GameMain.Actions.Battle;
 using MyGame.GameMain.Forms;
 using MyGame.GameMain.Items.Food;
+using MyGame.GameMain.Items;
 using MyGame.GameMain.Living.Monster;
 using MyGame.GameMain.Living.Player;
 using System;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyGame.GameMain.Locations;
 
 // This is the code for your desktop app.
 // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
@@ -23,6 +25,10 @@ namespace MyGame
         private static MainMenu instance { get; set; }
         public MainMenu()
         {
+            playerLocationLabel = new Label();
+            this.changeLocationLabel(Player.getPlayer().currentLocation);
+            playerInventoryList = new ListBox();
+            playerInventoryList.DataSource = Player.getPlayer().items;
             InitializeComponent();
         }
 
@@ -32,6 +38,19 @@ namespace MyGame
                 instance = new MainMenu();
 
             return instance;
+        }
+
+        public void addToInventory(List<Item> itens)
+        {
+            foreach(Item item in itens)
+            {
+                playerInventoryList.Items.Add(item.name);
+            }
+        }
+
+        public void changeLocationLabel(Location location)
+        {
+            this.playerLocationLabel.Text = location.name;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -78,6 +97,28 @@ namespace MyGame
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void travelButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TravelDestinations travelDestination = new TravelDestinations();
+            travelDestination.Show();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerLocationLabel_Click(object sender, EventArgs e)
         {
 
         }

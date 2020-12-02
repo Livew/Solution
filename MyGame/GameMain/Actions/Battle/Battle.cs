@@ -15,13 +15,16 @@ namespace MyGame.GameMain.Actions.Battle
         public Player player { get; set; }
         public BattleCalculate battleCalculate { get; set; }
         public BattleAnimate battleAnimate { get; set; }
+        public BattleForm battleForm { get; set; }
 
         public Battle(Player player, Monster monster)
         {
             this.player = player;
             this.monster = monster;
 
-            this.battleAnimate = new BattleAnimate(new BattleForm(player, monster));
+            this.battleForm = new BattleForm(player, monster);
+
+            this.battleAnimate = new BattleAnimate(battleForm);
 
             StartBattleAsync(player, monster);
         }
@@ -30,10 +33,17 @@ namespace MyGame.GameMain.Actions.Battle
         {
             while (this.monster.currentHp > 0 && this.player.currentHp > 0)
             {
-                playerAttack(player, monster);
-                monsterAttack(player, monster);
+                if(player.isAlive()) playerAttack(player, monster);
+
+                if(monster.isAlive()) monsterAttack(player, monster);
+
                 await Task.Delay(2000);
             }
+
+            await Task.Delay(3000);
+
+            this.battleForm.Dispose();
+            MainMenu.getMainMenu().Show();
 
             BattleCalculate battleCalculate = new BattleCalculate(player, monster);
         }

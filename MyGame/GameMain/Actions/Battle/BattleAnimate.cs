@@ -20,14 +20,22 @@ namespace MyGame.GameMain.Actions.Battle
             form.Show();
         }
 
-        public void changeMonsterLabelHealth(LivingCreature monster)
+        public void changeMonsterLabelHealth(LivingCreature livingCreature)
         {
-            this.form.setMonsterLabelText(monster.currentHp.ToString() + " / " + monster.maxHp.ToString()); 
+            this.form.setMonsterLabelText(getLabel("monsterHpLabel"), livingCreature.currentHp.ToString() + " / " + livingCreature.maxHp.ToString()); 
         }
 
         public void changePlayerLabelHealth(Player player)
         {
-            this.form.setPlayerLabelText(player.currentHp.ToString() + " / " + player.maxHp.ToString());
+            this.form.setPlayerLabelText(getLabel("playerHpLabel"), player.currentHp.ToString() + " / " + player.maxHp.ToString());
+        }
+
+        Label getLabel(string label)
+        {
+            var control = this.form.Controls.OfType<Label>()
+                           .FirstOrDefault(c => c.Name == label);
+
+            return control;
         }
     }
 }

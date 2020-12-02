@@ -1,4 +1,5 @@
-﻿using MyGame.GameMain.Living.Monster;
+﻿using MyGame.GameMain.Forms.Builders;
+using MyGame.GameMain.Living.Monster;
 using MyGame.GameMain.Living.Player;
 using System;
 using System.Collections.Generic;
@@ -14,25 +15,21 @@ namespace MyGame.GameMain.Forms
 {
     public partial class BattleForm : Form
     {
-        public void setMonsterLabelText(string text)
+        public void setMonsterLabelText(Label label, string text)
         {
-            monsterHpLabel.Text = text;
+            label.Text = text;
         }
 
-        public void setPlayerLabelText(string text)
+        public void setPlayerLabelText(Label label, string text)
         {
-            playerHpLabel.Text = text;
+            label.Text = text;
         }
 
         public BattleForm(Player player, Monster monster)
         {
+            new BattleBuilder(this, monster);
+
             InitializeComponent();
-
-            playerNameLabel.Text = player.name;
-            monsterNameLabel.Text = monster.name;
-
-            playerHpLabel.Text = player.currentHp.ToString() + " / " + player.maxHp.ToString();
-            monsterHpLabel.Text = monster.currentHp.ToString() + " / " + monster.maxHp.ToString();
         }
 
         private void backToMain_Click(object sender, EventArgs e)
