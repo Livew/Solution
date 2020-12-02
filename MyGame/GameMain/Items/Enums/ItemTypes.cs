@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame.GameMain.Items.Enums
 {
-    class ItemTypes
+    public class ItemTypes
     {
         public enum ItemType
         {

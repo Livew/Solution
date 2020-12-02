@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame.GameMain.Living
 {
-    class Living
+    public class Living
     {
         public int maxHp { get; set; }
         public int currentHp { get; set; }

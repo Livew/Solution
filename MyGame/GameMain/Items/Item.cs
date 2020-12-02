@@ -7,7 +7,7 @@ using MyGame.GameMain.Items.Enums;
 
 namespace MyGame.GameMain.Items
 {
-    class Item
+    public class Item
     {
         public string name { get; set; }
         public ItemTypes.ItemType itemType { get; set; }

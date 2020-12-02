@@ -45,19 +45,23 @@ namespace MyGame
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 formBattle = new Form2();
-            formBattle.Show();
 
             Rat rat = new Rat();
 
             Battle battle = new Battle(Player.getPlayer(), rat);
+            Form2 formBattle = new Form2(Player.getPlayer(), rat);
+            formBattle.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             BigRat bigRat = new BigRat();
 
             Battle battle = new Battle(Player.getPlayer(), bigRat);
+            Form2 formBattle = new Form2(Player.getPlayer(), bigRat);
+            formBattle.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

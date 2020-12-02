@@ -7,7 +7,7 @@ using MyGame.GameMain.Items;
 
 namespace MyGame.GameMain.Living.Monster
 {
-    class Monster : Living
+    public class Monster : Living
     {
         public string name { get; set; }
         public List<Item> itemMayDrops { get; set; }

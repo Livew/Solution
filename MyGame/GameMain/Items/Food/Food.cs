@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame.GameMain.Items.Food
 {
-    class Food : Item
+    public class Food : Item
     {
         public int healAmount { get; set; }
     }

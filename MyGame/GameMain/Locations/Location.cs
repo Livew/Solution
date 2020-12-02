@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyGame.GameMain.Locations
 {
-    class Location
+    public class Location
     {
         public string name { get; set; }
         public List<Monster> monsters { get; set; }
