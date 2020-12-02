@@ -20,7 +20,7 @@ namespace MyGame.GameMain.Actions.Battle
 
             giveExp();
             giveGold();
-            //giveItems();
+            giveItems();
         }
 
         public void giveExp()
@@ -37,7 +37,7 @@ namespace MyGame.GameMain.Actions.Battle
 
         public void giveItems()
         {
-            foreach (Item item in monster.itemMayDrops)
+            foreach (Item item in monster.itensWillDrop)
             {
                 player.items.Add(item);
                 Console.WriteLine("!!!!!!!! " + player.name + " Got " + item.name);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyGame.GameMain.Items.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,16 @@ namespace MyGame.GameMain.Items.Misc
 {
     class RatTooth : Item
     {
-        public string name { get; set; }
-
-        public RatTooth()
+        public RatTooth(int dropRate)
         {
             this.name = "Rat Tooth";
-            this.dropRate = 10;
+            this.itemType = ItemTypes.ItemType.Misc;
+            calculateDropRate(dropRate);
+        }
+
+        void calculateDropRate(int rate)
+        {
+            this.dropRate = rate * 4;
         }
     }
 }

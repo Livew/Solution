@@ -18,11 +18,20 @@ using System.Windows.Forms;
 
 namespace MyGame
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        private static MainMenu instance { get; set; }
+        public MainMenu()
         {
             InitializeComponent();
+        }
+
+        public static MainMenu getMainMenu()
+        {
+            if (instance == null)
+                instance = new MainMenu();
+
+            return instance;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -37,7 +46,7 @@ namespace MyGame
             MessageBox.Show("Thanks!");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
 
         }
@@ -49,8 +58,6 @@ namespace MyGame
             Rat rat = new Rat();
 
             Battle battle = new Battle(Player.getPlayer(), rat);
-            Form2 formBattle = new Form2(Player.getPlayer(), rat);
-            formBattle.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -60,16 +67,19 @@ namespace MyGame
             BigRat bigRat = new BigRat();
 
             Battle battle = new Battle(Player.getPlayer(), bigRat);
-            Form2 formBattle = new Form2(Player.getPlayer(), bigRat);
-            formBattle.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Player player = Player.getPlayer();
-            Cheese cheese = new Cheese();
+            Cheese cheese = new Cheese(0);
 
             player.eat(cheese);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,16 +7,21 @@ using MyGame.GameMain.Items.Enums;
 
 namespace MyGame.GameMain.Items.Food
 {
-    class Cheese : Food
+    public class Cheese : Food
     {
-        public Cheese()
+        public Cheese(int dropRate)
         {
             this.name = "Cheese";
             this.healAmount = 2;
             this.itemType = ItemTypes.ItemType.Food;
             this.goldPrice = 10;
             this.cashPrice = 0;
-            this.dropRate = 20;
+            calculateDropRate(dropRate);
+        }
+
+        void calculateDropRate(int rate)
+        {
+            this.dropRate = rate * 5;
         }
     }
 }

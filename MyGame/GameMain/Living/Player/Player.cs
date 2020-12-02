@@ -9,7 +9,7 @@ using MyGame.GameMain.Locations;
 
 namespace MyGame.GameMain.Living.Player
 {
-    public class Player : Living
+    public class Player : LivingCreature
     {
         public string name { get; set; }
         public int exp { get; set; }

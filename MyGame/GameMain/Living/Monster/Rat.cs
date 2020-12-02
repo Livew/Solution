@@ -13,11 +13,15 @@ namespace MyGame.GameMain.Living.Monster
     {
         public Rat()
         {
-            Cheese cheese = new Cheese();
-            RatTooth ratTooth = new RatTooth();
+            Cheese cheese = new Cheese(4);
+            RatTooth ratTooth = new RatTooth(4);
 
-            //itemMayDrops.Add(cheese);
-            //itemMayDrops.Add(ratTooth);
+            List<Item> itensMayDrop = new List<Item>();
+
+            itensMayDrop.Add(cheese);
+            itensMayDrop.Add(ratTooth);
+
+            this.itensWillDrop = this.willDrop(itensMayDrop);
 
             this.name = "Rat";
             this.maxHp = 10;
@@ -28,11 +32,6 @@ namespace MyGame.GameMain.Living.Monster
             this.expDrop = 5;
             this.goldDrop = 2;
             this.cashDrop = 0;
-
-            //foreach (Item item in this.itemMayDrops)
-            //{
-            //    willDrop(item);
-            //}
         }
     }
 }

@@ -20,7 +20,7 @@ namespace MyGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainMenu());
 
             Player player = new Player("Livew", 20, 20, 3, 5, 0, 1, new List<Item>());
         }
