@@ -34,7 +34,7 @@ namespace MyGame.GameMain.Forms
 
         private void backToMain_Click(object sender, EventArgs e)
         {
-            MainMenu.getMainMenu().Show();
+            new MainMenu().Show();
             this.Dispose();
         }
     }

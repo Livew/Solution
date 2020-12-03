@@ -25,10 +25,10 @@ namespace MyGame.GameMain.Forms.Builders
             this.monster = monster;
             this.form = form;
 
-            labelBuilder();
+            buildLabels();
         }
 
-        void labelBuilder()
+        void buildLabels()
         {
             List<Label> labels = new List<Label>();
 

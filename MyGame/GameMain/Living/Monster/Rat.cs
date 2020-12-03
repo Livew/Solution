@@ -11,6 +11,7 @@ namespace MyGame.GameMain.Living.Monster
 {
     class Rat : Monster
     {
+        private static Rat instance { get; set; }
         public Rat()
         {
             Cheese cheese = new Cheese(4);
@@ -30,6 +31,14 @@ namespace MyGame.GameMain.Living.Monster
             this.expDrop = 5;
             this.goldDrop = 2;
             this.cashDrop = 0;
+        }
+
+        public static Rat getRat()
+        {
+            if (instance == null)
+                instance = new Rat();
+
+            return instance;
         }
 
         public static void destroyRat()

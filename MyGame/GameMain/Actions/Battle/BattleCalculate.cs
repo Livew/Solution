@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyGame.GameMain.Forms.Builders;
 
 namespace MyGame.GameMain.Actions.Battle
 {
@@ -13,10 +14,12 @@ namespace MyGame.GameMain.Actions.Battle
     {
         public Player player { get; set; }
         public Monster monster { get; set; }
+        public MainMenuBuilder mainMenuBuilder { get; set; }
         public BattleCalculate(Player player, Monster monster)
         {
             this.player = player;
             this.monster = monster;
+            //this.mainMenuBuilder = new MainMenuBuilder();
 
             giveExp();
             giveGold();
@@ -27,12 +30,15 @@ namespace MyGame.GameMain.Actions.Battle
         {
             this.player.exp += monster.expDrop;
             Console.WriteLine("!!!!!!!! " + player.name + " Earned " + monster.expDrop + " EXP. Total EXP: " + this.player.exp);
+            //mainMenuBuilder.changeExpLabel();
+
         }
 
         public void giveGold()
         {
             this.player.gold += monster.goldDrop;
             Console.WriteLine("!!!!!!!! " + player.name + " Earned " + monster.goldDrop + " Gold. Total Gold: " + this.player.gold);
+            //mainMenuBuilder.changeGoldLabel();
         }
 
         public void giveItems()
@@ -43,7 +49,7 @@ namespace MyGame.GameMain.Actions.Battle
                 Console.WriteLine("!!!!!!!! " + player.name + " Got " + item.name);
             }
 
-            MainMenu.getMainMenu().addToInventory(monster.itensWillDrop);
+            //new MainMenu().addToInventory(monster.itensWillDrop);
         }
     }
 }

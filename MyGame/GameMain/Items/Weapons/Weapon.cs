@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame.GameMain.Items.Weapons
 {
-    class Weapon : Item
+    public class Weapon : Item
     {
         public int levelRequirement { get; set; }
         public int minAtk { get; set; }

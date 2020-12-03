@@ -22,7 +22,7 @@ namespace MyGame
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenu());
 
-            Player player = new Player("Livew", 20, 20, 3, 5, 0, 1, new List<Item>());
+            Player player = new Player("Livew", 20, 20, 0, 1, 1, new List<Item>());
         }
     }
 }

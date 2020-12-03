@@ -15,21 +15,13 @@ namespace MyGame.GameMain.Locations.Undergrounds
         private static SewerSub1 instance { get; set; }
         public SewerSub1()
         {
-            Rat rat = Rat.getRat();
-            BigRat bigRat = BigRat.getBigRat();
+            Rat rat = new Rat();
+            BigRat bigRat = new BigRat();
 
             this.name = "Sewer Sub 1";
             this.levelRequirement = 1;
             this.monsters.Add(rat);
             this.monsters.Add(bigRat);
-        }
-
-        public static SewerSub1 getSewerSub1()
-        {
-            if (instance == null)
-                instance = new SewerSub1();
-
-            return instance;
         }
     }
 }

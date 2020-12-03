@@ -28,7 +28,7 @@ namespace MyGame.GameMain.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainMenu.getMainMenu().Show();
+            new MainMenu().Show();
             this.Dispose();
         }
     }

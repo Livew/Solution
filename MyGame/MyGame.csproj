@@ -48,6 +48,12 @@
     <Compile Include="GameMain\Actions\Battle\BattleAnimate.cs" />
     <Compile Include="GameMain\Actions\Travel\Travelling.cs" />
     <Compile Include="GameMain\Forms\Builders\BattleBuilder.cs" />
+    <Compile Include="GameMain\Forms\Builders\GenericComponentBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMain\Forms\Builders\MainMenuBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GameMain\Forms\Builders\LocationBuilder.cs" />
     <Compile Include="GameMain\Forms\Builders\TravelBuilder.cs" />
     <Compile Include="GameMain\Forms\MainMenu.cs">

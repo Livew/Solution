@@ -54,7 +54,7 @@ namespace MyGame.GameMain.Forms.Builders
 
                 button.Click += (object sender, EventArgs e) =>
                 {
-                    MainMenu.getMainMenu().changeLocationLabel(location);
+                    new MainMenu().changeLocationLabel(location);
                     form.Hide();
                     LocationForm locationForm = new LocationForm(location);
                     this.travel.travelTo(location);

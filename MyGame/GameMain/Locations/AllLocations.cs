@@ -17,10 +17,12 @@ namespace MyGame.GameMain.Locations
             List<Location> locations = new List<Location>();
 
             locations.Add(FirstCity.getFirstCity());
+            locations.Add(new SewerSub1());
+            locations.Add(SewerSub2.getSewerSub2());
             locations.Add(OakForest.getOakForest());
             locations.Add(LeakDesert.getLeakDesert());
-            locations.Add(SewerSub1.getSewerSub1());
-            locations.Add(SewerSub2.getSewerSub2());
+            
+            
 
             return locations;
         }
