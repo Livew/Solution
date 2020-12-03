@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyGame.GameMain.Forms.Move;
 
 namespace MyGame
 {
@@ -20,8 +21,9 @@ namespace MyGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            //Application.Run(new MainMenu());
 
+            Application.Run(new TestMove());
             Player player = new Player("Livew", 20, 20, 0, 1, 1, new List<Item>());
         }
     }

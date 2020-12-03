@@ -76,6 +76,12 @@
     <Compile Include="GameMain\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameMain\Forms\Move\TestMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMain\Forms\Move\TestMove.Designer.cs">
+      <DependentUpon>TestMove.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameMain\Forms\TravelDestinations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameMain\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameMain\Forms\Move\TestMove.resx">
+      <DependentUpon>TestMove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameMain\Forms\TravelDestinations.resx">
       <DependentUpon>TravelDestinations.cs</DependentUpon>
